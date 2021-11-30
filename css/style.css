@@ -1,0 +1,142 @@
+/* ***===--- main stylesheet for global and floppy disk styles ---===*** */
+
+body {
+    background-color: #000; 
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-size: 16px;
+
+}
+
+.box {
+    border: 3px solid green;
+    padding: 1em;
+
+}
+
+p > span {
+    text-decoration: underline;
+    text-transform: uppercase;
+    border-bottom: 1.5px solid #a4243b;
+}
+
+.disk-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+}
+
+
+.disk-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    width: 300px;
+    margin-top: 400px;
+    position: relative;
+    z-index: 100;
+    margin: auto; 
+}
+
+.floppy-disk {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: #675d56;
+    border-radius: 7.5px;
+    box-shadow: -3.75px 6px 7.5px #32281d;
+}
+
+
+
+.floppy-disk .top .slider-body {
+    margin-left: 22.5px;
+    background-color: #675d56;
+    width: 210px;
+    height: 105px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-left: 2.25px solid #877d76;
+    border-right: 2.25px solid #877d76;
+}
+
+.floppy-disk .top .slider-body .slider {
+    position: relative;
+    height: 105px;
+    width: 150px;
+    background: #222;
+    border-bottom-left-radius: 7.5px;
+    border-bottom-right-radius: 7.5px;
+    transition: .3s ease;
+    -moz-transition: .3s ease;
+    -webkit-transition: .3s ease;
+}
+
+.floppy-disk .top .slider-body .slider:before {
+    content: '';
+    height: 75px;
+    width: 34.5px;
+    background: #675d56;
+    position: absolute;
+    top: 15px;
+    left: 105px;
+    border-radius: 2.25px;
+    
+}
+
+.floppy-disk .top .slider-body:hover .slider {
+    transform: translateX(60px);
+}
+
+.floppy-disk .bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.floppy-disk .bottom .title {
+    font-size: 18.75px;
+    text-transform: uppercase;
+    color: #111;
+    margin-left: 150px;
+
+}
+
+.floppy-disk .bottom .plain {
+    width: 14.063em;
+    height: 10.75em;
+    margin-left: 37.5px;
+    border-left: 2.25px solid #877d76;
+    border-right: 2.25px solid #403c3a;
+    border-top: 2.25px solid #403c3a;
+    background: linear-gradient( to bottom, #ddc4b0 50%, #decdc1 50% );
+    background-size: 75% 56.25px;
+    border-top-left-radius: 3.75px;
+    border-top-right-radius: 3.75px;
+}
+
+.floppy-disk .bottom .plain::before {
+    content: "";
+    position: absolute;
+    width: 11.25px;
+    height: 11.25px;
+    background-color: #000;
+    left: 15px;
+    bottom: 15px;
+    box-shadow: inset -3.75px 0 7.5px #333;
+}
+
+
+
+.qr-code {
+    font-family:  'Gloria Hallelujah', cursive;
+    color: #a4243b;
+    font-size: .75rem;
+}
